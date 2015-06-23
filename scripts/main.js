@@ -1,11 +1,16 @@
 var React = require('react');
 var UserComponent = require("./components/usercomponent");
+var Backbone = require("backbone");
+Backbone.$ = require("jquery");
+var UserInfo = require("./components/usercomponent");
+
+
 
 var Pages = Backbone.Router.extend({
 
   routes: {
   	"": "register",
-  	"register": "register"
+  	"register": "register",
   	"login": "login",
   	"profile": "profile"
    
@@ -13,17 +18,17 @@ var Pages = Backbone.Router.extend({
 
 	register: function() {
     	console.log("this is the register page");
-    	React.render(<Register/>, document.querySelector('#container'));
+    	React.render(<UserInfo/>, document.querySelector('#container'));
   },
 
-	login: function() {
-		console.log("this is the login page");
-  		React.render(<Login/>, document.querySelector('#container'));
-  },
+	// login: function() {
+	// 	console.log("this is the login page");
+ //  		React.render(<Login/>, document.querySelector('#container'));
+ //  },
 
-  	profile: function() {
-  		console.log("this is the profile page");
-  	}
+ //  	profile: function() {
+ //  		console.log("this is the profile page");
+ //  	}
 
 });
 var pages = new Pages();
