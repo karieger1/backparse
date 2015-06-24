@@ -1,4 +1,5 @@
 var React = require('react');
+var parseSettings = require("../config/parse");
 var UserComponent = require("./components/usercomponent");
 var Backbone = require("backbone");
 Backbone.$ = require("jquery");

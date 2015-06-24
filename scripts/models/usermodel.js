@@ -8,9 +8,9 @@ var Backbone = require('backparse')({
 
 var UserModel = Backbone.Model.extend({
     defaults: {
-        username: '',
+        email: '',
         password: '',
-        email: ''
+        confirmPassword: ''
     },
     parseClassName: 'backparse',
     idAttribute: 'objectId',

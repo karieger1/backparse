@@ -32527,16 +32527,6 @@ module.exports = React.createClass({
 					{ className: "form-group" },
 					React.createElement(
 						"label",
-						{ htmlFor: "name" },
-						"Full Name"
-					),
-					React.createElement("input", { type: "text", className: "form-control", placeholder: "Joffrey Baratheon" })
-				),
-				React.createElement(
-					"div",
-					{ className: "form-group" },
-					React.createElement(
-						"label",
 						{ htmlFor: "exampleInputEmail1" },
 						"Email address"
 					),
@@ -32549,6 +32539,16 @@ module.exports = React.createClass({
 						"label",
 						{ htmlFor: "exampleInputPassword1" },
 						"Password"
+					),
+					React.createElement("input", { type: "password", className: "form-control", id: "exampleInputPassword1", placeholder: "Password" })
+				),
+				React.createElement(
+					"div",
+					{ className: "form-group" },
+					React.createElement(
+						"label",
+						{ htmlFor: "exampleInputPassword1" },
+						"Confirm Password"
 					),
 					React.createElement("input", { type: "password", className: "form-control", id: "exampleInputPassword1", placeholder: "Password" })
 				),
@@ -32568,6 +32568,12 @@ module.exports = React.createClass({
 	verify: function verify(e) {
 		e.preventDefault();
 		console.log("form submitted");
+
+		var data = {
+			name: this.refs.name.getDOMNode().value,
+			password: this.refs.password.getDOMNode().value,
+			email: this.refs.email.getDOMNode().value
+		};
 	}
 });
 
